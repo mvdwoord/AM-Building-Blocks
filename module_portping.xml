@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!-- RES Automation Manager Building Blocks -->
+<!-- Created by mvdw\administrator on 26-10-2013 2:26:56 -->
+<AutomationManager>
+	<buildingblock>
+		<projects/>
+		<modules>
+			<module>
+				<properties>
+					<guid>{EA25A833-B82D-4050-BBA9-DE4AA1C98D71}</guid>
+					<name>PortPing</name>
+					<enabled>yes</enabled>
+					<description/>
+					<folderpath/>
+					<deleteusedresources>yes</deleteusedresources>
+				</properties>
+				<tasks>
+					<task hidden="yes">
+						<limitinvoke>no</limitinvoke>
+						<parameters>
+							<param>
+								<name>Targets</name>
+								<value1/>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description>A comma separated list of one or more targets, accepts hostnames and IP addresses.
+Example:
+myserver1
+10.10.10.10,webserver3.mydomain.com,192.168.1.50</description>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no">no</importbb>
+									<schedulejob showprev="yes">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Ports</name>
+								<value1>3389</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description>A comma separated list of one or more portnumbers.
+
+Example:
+80
+139, 3389</description>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no">no</importbb>
+									<schedulejob showprev="yes">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>FailedPorts</name>
+								<value1/>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description>Returns the number of non-responsive ports.</description>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no">no</importbb>
+									<schedulejob showprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions>
+							<condition guid="{4CB1889B-CCA0-4D23-9A38-7A2D0017732C}">
+								<expressions/>
+								<operator>AND</operator>
+								<actiontrue>3</actiontrue>
+								<when>0</when>
+								<action>3</action>
+								<enabled>yes</enabled>
+							</condition>
+						</conditions>
+						<variablescontainer/>
+					</task>
+					<task>
+						<properties>
+							<type>PWRSHELL</type>
+							<guid>{4CB1889B-CCA0-4D23-9A38-7A2D0017732C}</guid>
+							<description>Execute Windows PowerShell Script</description>
+							<enabled>yes</enabled>
+							<comments/>
+							<onerror>resume</onerror>
+						</properties>
+						<settings>
+							<username/>
+							<password encrypted="yes"/>
+							<usescript>yes</usescript>
+							<source>#Input Variables
+$TargetList = "$[Targets]" -replace '\s+', '' -Split ","
+$TCPPortList = "$[Ports]" -replace '\s+', '' -Split ","
+$TimeOut = 1000
+
+$TimeOutCount = 0
+foreach ($Target in $TargetList){
+  foreach ($TCPPort in $TCPPortList){
+    $Socket = New-Object System.Net.Sockets.Socket([System.Net.Sockets.AddressFamily]::InterNetwork,`
+    [System.Net.Sockets.SocketType]::Stream,`
+    [System.Net.Sockets.ProtocolType]::Tcp)
+
+    $SyncResult = $Socket.BeginConnect($Target, $TCPPort, $null, $null)
+    $Measurement = Measure-Command {
+      $Success = $SyncResult.AsyncWaitHandle.WaitOne($TimeOut, $true)
+    }
+    $ResponseTime = $Measurement.Milliseconds
+
+    if (!($Socket.Connected)){
+      "$Target Did not respond on port: $TCPPort within $TimeOut ms."
+      $TimeOutCount += 1
+    }
+    else{
+      "$Target Responded at port $TCPPort in $ResponseTime ms."
+      $Socket.Close()
+    }
+  }
+}
+Exit($TimeOutCount)</source>
+							<outputwidth>80</outputwidth>
+							<timeout>10</timeout>
+							<terminate>no</terminate>
+							<setexitcodeparameter parse="no">$[FailedPorts]</setexitcodeparameter>
+							<snapins/>
+							<overrideexecutionpolicy>yes</overrideexecutionpolicy>
+							<usex86psonx64>no</usex86psonx64>
+						</settings>
+					</task>
+				</tasks>
+			</module>
+		</modules>
+		<resources/>
+		<runbooks/>
+	</buildingblock>
+</AutomationManager>
