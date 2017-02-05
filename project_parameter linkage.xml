@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<!-- RES ONE Automation Building Blocks -->
+<!-- Created by win-ttdnubi9tna\maarten on 1/22/2017 11:18:15 PM -->
+<AutomationManager>
+	<buildingblock version="3.0">
+		<projects>
+			<project>
+				<properties>
+					<guid>{F55DE319-4D17-4181-9019-0D029FE6FEBC}</guid>
+					<name>Parameter Linkage</name>
+					<enabled>yes</enabled>
+					<description>This project shows all different types of parameter linking.</description>
+					<version>1.0.9</version>
+					<versioncomment>Updated version</versioncomment>
+					<properties>
+						<parameters>
+							<param>
+								<name>Project-Argument1</name>
+								<value1>Ahoihoi</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection>
+									<module type="module" guid="{A0784E0C-76E7-4160-B6C7-E0832EE49150}" linktype="2">
+										<param>Argument1</param>
+									</module>
+									<module type="module" guid="{4352F32E-A478-44AE-88FE-F4BAC65F6BB1}" linktype="0">
+										<param>Argument1</param>
+									</module>
+								</selection>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Project-Argument2</name>
+								<value1>Project</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection>
+									<module type="module" guid="{A0784E0C-76E7-4160-B6C7-E0832EE49150}" linktype="1">
+										<param>Argument2</param>
+									</module>
+									<module type="module" guid="{34522278-4E27-4F26-946D-CFEC9C8BC55A}" linktype="0">
+										<param>Argument2</param>
+									</module>
+								</selection>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Argument1</name>
+								<value1>Hello</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection>
+									<module type="module" guid="{34522278-4E27-4F26-946D-CFEC9C8BC55A}" linktype="0">
+										<param>Argument1</param>
+									</module>
+								</selection>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Argument2</name>
+								<value1/>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection>
+									<module type="module" guid="{4352F32E-A478-44AE-88FE-F4BAC65F6BB1}" linktype="0">
+										<param>Argument2</param>
+									</module>
+								</selection>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation validationmask="PHONE: 073-000000" validationliteral="PHONE: 073-______">yes</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>CredentialParameter</name>
+								<value1>DOMAIN\UserID</value1>
+								<value2>207F00A5008D0136010E030F00B10050</value2>
+								<value3/>
+								<type>2</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+								</inputoptions>
+							</param>
+							<param>
+								<name>PasswordParameter</name>
+								<value1>00AF009700720067013E0086006F00FF00B301030079</value1>
+								<value2/>
+								<value3/>
+								<type>5</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+								</inputoptions>
+							</param>
+							<param>
+								<name>ListParameter</name>
+								<value1>Setting3</value1>
+								<value2>Setting1;Setting2;Setting3</value2>
+								<value3>Description1;Description2;Description3 This is selected as default.</value3>
+								<type>1</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>yes</required>
+								</inputoptions>
+							</param>
+							<param>
+								<name>MultiLineParameter</name>
+								<value1>This is line1
+This is Line 2
+
+The line above is empty.</value1>
+								<value2/>
+								<value3/>
+								<type>4</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+								</inputoptions>
+							</param>
+							<param>
+								<name>MultiSelectListParameter</name>
+								<value1>Setting1;Setting3</value1>
+								<value2>Setting1;Setting2;Setting3</value2>
+								<value3>Description1 This option is selected by default;Description2;Description3 This is also selected</value3>
+								<type>3</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="yes" eraseprev="no">yes</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>yes</required>
+								</inputoptions>
+							</param>
+							<param>
+								<name>TestMissingAttribute</name>
+								<value1/>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="no" eraseprev="no">no</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions/>
+						<limitinvoke>no</limitinvoke>
+						<separators/>
+						<variablescontainer></variablescontainer>
+					</properties>
+					<folderpath>
+						<folder>
+							<name>AM-Building-Blocks</name>
+							<description/>
+							<guid>{C1012776-BAE1-4876-ABFB-87B2878E8642}</guid>
+						</folder>
+					</folderpath>
+				</properties>
+				<modules>
+					<module>
+						<guid>{A0784E0C-76E7-4160-B6C7-E0832EE49150}</guid>
+						<enabled>yes</enabled>
+						<rowguid>{51949ED3-8B74-47AC-BCB2-C46A8EA4AC91}</rowguid>
+					</module>
+					<module>
+						<guid>{4352F32E-A478-44AE-88FE-F4BAC65F6BB1}</guid>
+						<enabled>yes</enabled>
+						<rowguid>{558CA5C2-3A96-4D3B-8C44-6DFB52F5DACC}</rowguid>
+					</module>
+					<module>
+						<guid>{34522278-4E27-4F26-946D-CFEC9C8BC55A}</guid>
+						<enabled>yes</enabled>
+						<rowguid>{E7F8669F-41A3-4DD2-ADB6-7434725CAABB}</rowguid>
+					</module>
+				</modules>
+			</project>
+		</projects>
+		<modules>
+			<module>
+				<properties>
+					<guid>{A0784E0C-76E7-4160-B6C7-E0832EE49150}</guid>
+					<name>Windows CMD</name>
+					<enabled>yes</enabled>
+					<description>Reference implementation for a windows cmd task.</description>
+					<version>1.0.1</version>
+					<versioncomment>Updated version</versioncomment>
+					<properties>
+						<separators/>
+					</properties>
+					<folderpath>
+						<folder>
+							<name>AM-Building-Blocks</name>
+							<description/>
+							<guid>{54D968FF-5C91-408A-B969-1AE87FF6351C}</guid>
+							<folder>
+								<name>Reference Modules</name>
+								<description>A collection of reference modules for running various scripting tasks.</description>
+								<guid>{F14F211A-7739-4EBD-868C-D747C2C871BE}</guid>
+							</folder>
+						</folder>
+					</folderpath>
+					<deleteusedresources>yes</deleteusedresources>
+				</properties>
+				<tasks>
+					<task hidden="yes">
+						<limitinvoke>no</limitinvoke>
+						<parameters>
+							<param>
+								<name>Argument1</name>
+								<value1>Hello</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Argument2</name>
+								<value1>World!</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions>
+							<condition guid="{866FCAEF-EAD1-4F31-B827-2FDCC1768522}">
+								<expressions/>
+								<operator>AND</operator>
+								<actiontrue>3</actiontrue>
+								<when>0</when>
+								<action>3</action>
+								<enabled>yes</enabled>
+							</condition>
+						</conditions>
+						<variablescontainer></variablescontainer>
+					</task>
+					<task>
+						<properties>
+							<type>COMMAND</type>
+							<guid>{866FCAEF-EAD1-4F31-B827-2FDCC1768522}</guid>
+							<description>Execute "@[SCRIPT] $[Argument1] $[Argument2]"</description>
+							<enabled>yes</enabled>
+							<comments/>
+							<onerror>fail</onerror>
+						</properties>
+						<settings>
+							<commandline>@[SCRIPT] $[Argument1] $[Argument2]</commandline>
+							<username/>
+							<password encrypted="yes"/>
+							<loaduserprofile>no</loaduserprofile>
+							<usecmd>yes</usecmd>
+							<redirect>yes</redirect>
+							<failonerroutput>no</failonerroutput>
+							<validateexitcode>no</validateexitcode>
+							<validateexitcode>no</validateexitcode>
+							<failifexitcode>no</failifexitcode>
+							<exitcodes>0</exitcodes>
+							<timeout>10</timeout>
+							<terminate>no</terminate>
+							<terminatetree>no</terminatetree>
+							<grablogfile/>
+							<script>@ECHO OFF
+ECHO %1 %2</script>
+							<scriptext>cmd</scriptext>
+						</settings>
+					</task>
+				</tasks>
+			</module>
+			<module>
+				<properties>
+					<guid>{4352F32E-A478-44AE-88FE-F4BAC65F6BB1}</guid>
+					<name>VBScript</name>
+					<enabled>yes</enabled>
+					<description>Reference implementation for a VBScript task.</description>
+					<version>1.0.1</version>
+					<versioncomment>Updated version</versioncomment>
+					<properties>
+						<separators/>
+					</properties>
+					<folderpath>
+						<folder>
+							<name>AM-Building-Blocks</name>
+							<description/>
+							<guid>{54D968FF-5C91-408A-B969-1AE87FF6351C}</guid>
+							<folder>
+								<name>Reference Modules</name>
+								<description>A collection of reference modules for running various scripting tasks.</description>
+								<guid>{F14F211A-7739-4EBD-868C-D747C2C871BE}</guid>
+							</folder>
+						</folder>
+					</folderpath>
+					<deleteusedresources>yes</deleteusedresources>
+				</properties>
+				<tasks>
+					<task hidden="yes">
+						<limitinvoke>no</limitinvoke>
+						<parameters>
+							<param>
+								<name>Argument1</name>
+								<value1>Hello</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Argument2</name>
+								<value1>World!</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions>
+							<condition guid="{8C6FE311-1CBF-4911-8D63-F5CBAF58EE9E}">
+								<expressions/>
+								<operator>AND</operator>
+								<actiontrue>3</actiontrue>
+								<when>0</when>
+								<action>3</action>
+								<enabled>yes</enabled>
+							</condition>
+						</conditions>
+						<variablescontainer></variablescontainer>
+					</task>
+					<task>
+						<properties>
+							<type>COMMAND</type>
+							<guid>{8C6FE311-1CBF-4911-8D63-F5CBAF58EE9E}</guid>
+							<description>Execute "cscript //NoLogo @[SCRIPT] $[Argument1] $[Argument2]"</description>
+							<enabled>yes</enabled>
+							<comments/>
+							<onerror>fail</onerror>
+						</properties>
+						<settings>
+							<commandline>cscript //NoLogo @[SCRIPT] $[Argument1] $[Argument2]</commandline>
+							<username/>
+							<password encrypted="yes"/>
+							<loaduserprofile>no</loaduserprofile>
+							<usecmd>yes</usecmd>
+							<redirect>yes</redirect>
+							<failonerroutput>no</failonerroutput>
+							<validateexitcode>no</validateexitcode>
+							<validateexitcode>no</validateexitcode>
+							<failifexitcode>no</failifexitcode>
+							<exitcodes>0</exitcodes>
+							<timeout>10</timeout>
+							<terminate>no</terminate>
+							<terminatetree>no</terminatetree>
+							<grablogfile/>
+							<script>Arg1 = WScript.Arguments.Item(0)
+Arg2 = WScript.Arguments.Item(1)
+wscript.echo Arg1 &amp; " " &amp; Arg2</script>
+							<scriptext>vbs</scriptext>
+						</settings>
+					</task>
+				</tasks>
+			</module>
+			<module>
+				<properties>
+					<guid>{34522278-4E27-4F26-946D-CFEC9C8BC55A}</guid>
+					<name>PowerShell</name>
+					<enabled>yes</enabled>
+					<description>Reference implementation for a PowerShell task.</description>
+					<version>1.0.1</version>
+					<versioncomment>Updated version</versioncomment>
+					<properties>
+						<separators/>
+					</properties>
+					<folderpath>
+						<folder>
+							<name>AM-Building-Blocks</name>
+							<description/>
+							<guid>{54D968FF-5C91-408A-B969-1AE87FF6351C}</guid>
+							<folder>
+								<name>Reference Modules</name>
+								<description>A collection of reference modules for running various scripting tasks.</description>
+								<guid>{F14F211A-7739-4EBD-868C-D747C2C871BE}</guid>
+							</folder>
+						</folder>
+					</folderpath>
+					<deleteusedresources>yes</deleteusedresources>
+				</properties>
+				<tasks>
+					<task hidden="yes">
+						<limitinvoke>no</limitinvoke>
+						<parameters>
+							<param>
+								<name>Argument1</name>
+								<value1>Hello</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+							<param>
+								<name>Argument2</name>
+								<value1>World!</value1>
+								<value2/>
+								<value3/>
+								<type>0</type>
+								<description/>
+								<hint>Please provide the necessary input</hint>
+								<selection/>
+								<inputtiming>
+									<importbb showprev="yes" eraseprev="no">yes</importbb>
+									<schedulejob showprev="no" eraseprev="no">no</schedulejob>
+								</inputtiming>
+								<inputoptions>
+									<confirm>no</confirm>
+									<force>no</force>
+									<required>no</required>
+									<validation>no</validation>
+								</inputoptions>
+							</param>
+						</parameters>
+						<conditions>
+							<condition guid="{80BE45F7-93D6-40D3-983F-3D4902F16B5A}">
+								<expressions/>
+								<operator>AND</operator>
+								<actiontrue>3</actiontrue>
+								<when>0</when>
+								<action>3</action>
+								<enabled>yes</enabled>
+							</condition>
+						</conditions>
+						<variablescontainer></variablescontainer>
+					</task>
+					<task>
+						<properties>
+							<type>COMMAND</type>
+							<guid>{80BE45F7-93D6-40D3-983F-3D4902F16B5A}</guid>
+							<description>Execute "PowerShell @[SCRIPT] -Arg1 $[Argument1] -Arg2 $[Argument2]"</description>
+							<enabled>yes</enabled>
+							<comments/>
+							<onerror>fail</onerror>
+						</properties>
+						<settings>
+							<commandline>PowerShell @[SCRIPT] -Arg1 $[Argument1] -Arg2 $[Argument2]</commandline>
+							<username/>
+							<password encrypted="yes"/>
+							<loaduserprofile>no</loaduserprofile>
+							<usecmd>yes</usecmd>
+							<redirect>yes</redirect>
+							<failonerroutput>no</failonerroutput>
+							<validateexitcode>no</validateexitcode>
+							<validateexitcode>no</validateexitcode>
+							<failifexitcode>no</failifexitcode>
+							<exitcodes>0</exitcodes>
+							<timeout>10</timeout>
+							<terminate>no</terminate>
+							<terminatetree>no</terminatetree>
+							<grablogfile/>
+							<script>param(
+    [String]$Arg1,
+    [String]$Arg2
+)
+
+Write-Output "$arg1 $Arg2"</script>
+							<scriptext>ps1</scriptext>
+						</settings>
+					</task>
+				</tasks>
+			</module>
+		</modules>
+		<resources/>
+		<runbooks/>
+		<teams/>
+		<projectfolders/>
+		<modulefolders/>
+		<resourcefolders/>
+		<runbookfolders/>
+		<teamfolders/>
+	</buildingblock>
+</AutomationManager>
